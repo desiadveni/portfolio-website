@@ -1,0 +1,136 @@
+/* ===== 1. Variabel warna (ubah di sini) ===== */
+:root{
+  --navy:#0B2545;
+  --blue:#1D5FD1;
+  --blue-soft:#E6EEFB;
+  --ink:#1B2433;
+  --muted:#5B677A;
+  --line:#DCE3EE;
+  --bg:#FFFFFF;
+  --bg-alt:#F4F7FB;
+  --radius:12px;
+  --shadow:0 6px 24px rgba(11,37,69,.08);
+}
+
+/* ===== 2. Dasar ===== */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;color:var(--ink);background:var(--bg);font:400 16px/1.65 "Segoe UI",system-ui,-apple-system,Arial,sans-serif}
+h1,h2,h3,p,dl,dd,ol,ul{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+.container{max-width:none;width:100%;margin:0 auto;padding:0 6vw}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* ===== 3. Navbar ===== */
+.topbar{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px}
+.logo{display:grid;place-items:center;width:36px;height:36px;border-radius:8px;background:var(--blue);font-size:14px}
+.topbar nav{display:flex;align-items:center;gap:6px}
+.topbar nav a{padding:8px 12px;border-radius:8px;color:#C9D6EA;font-size:15px}
+.topbar nav a:hover{background:rgba(255,255,255,.1);color:#fff}
+.topbar nav .cta{background:var(--blue);color:#fff;font-weight:600;margin-left:6px}
+.topbar nav .cta:hover{background:#2E73E8}
+
+/* ===== 4. Hero ===== */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#123B73 100%);color:#fff;padding:80px 0 120px}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
+.eyebrow{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.12);font-size:13px;font-weight:600;letter-spacing:.04em;margin-bottom:20px}
+.hero h1{font-size:clamp(32px,4.6vw,52px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+.lead{margin-top:20px;max-width:56ch;font-size:18px;color:#C9D6EA}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.actions.center{justify-content:center}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:600;border:2px solid transparent;transition:.2s}
+.btn.primary{background:var(--blue);color:#fff}
+.btn.primary:hover{background:#2E73E8}
+.btn.ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.btn.light{background:#fff;color:var(--navy)}
+.btn.light:hover{background:var(--blue-soft)}
+.btn.outline{border-color:rgba(255,255,255,.5);color:#fff}
+.btn.outline:hover{background:rgba(255,255,255,.12)}
+
+/* kartu identitas */
+.card-id{background:#fff;color:var(--ink);border-radius:16px;padding:32px;box-shadow:0 20px 50px rgba(0,0,0,.25);text-align:center}
+.avatar{display:grid;place-items:center;width:96px;height:96px;margin:0 auto 16px;border-radius:50%;background:var(--blue);color:#fff;font-size:32px;font-weight:700;border:4px solid var(--blue-soft)}
+img.avatar{
+  width:120px;
+  height:120px;
+  object-fit:cover;      
+  object-position:center top; 
+}
+.card-id h2{font-size:22px}
+.card-id>p{color:var(--muted);margin-bottom:20px}
+.card-id dl{text-align:left;border-top:1px solid var(--line)}
+.card-id dl div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.card-id dt{color:var(--muted)}
+.card-id dd{font-weight:600;text-align:right}
+
+/* ===== 5. Statistik (menimpa hero) ===== */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:-56px;position:relative;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}
+.stats div{padding:26px 16px;text-align:center;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats strong{display:block;font-size:30px;color:var(--blue);line-height:1.2}
+.stats span{color:var(--muted);font-size:14px}
+
+/* ===== 6. Section umum ===== */
+.block{padding:84px 0}
+.block.alt{background:var(--bg-alt)}
+.title{font-size:clamp(26px,3.4vw,34px);color:var(--navy);font-weight:800}
+.bar-accent{display:block;width:56px;height:4px;border-radius:2px;background:var(--blue);margin:12px 0 40px}
+.two{display:grid;grid-template-columns:1fr 2fr;gap:48px}
+.two .bar-accent{margin-bottom:0}
+.prose p{margin-bottom:16px;color:var(--muted);font-size:17px}
+
+/* ===== 7. Keahlian ===== */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--blue)}
+.icon{display:grid;place-items:center;width:48px;height:48px;border-radius:10px;background:var(--blue-soft);color:var(--blue);font-weight:800;font-size:15px;margin-bottom:16px}
+.card h3{font-size:18px;color:var(--navy);margin-bottom:6px}
+.card p{color:var(--muted);font-size:15px;margin-bottom:16px}
+.meter{height:6px;border-radius:3px;background:var(--line);overflow:hidden;margin-bottom:12px}
+.meter i{display:block;height:100%;background:var(--blue);border-radius:3px}
+.w75{width:75%}.w80{width:80%}.w85{width:85%}.w90{width:90%}
+.card small{color:var(--muted);font-size:13px}
+
+/* ===== 8. Pengalaman (timeline) ===== */
+.timeline{position:relative;margin-left:8px;padding-left:32px;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding-bottom:36px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-41px;top:6px;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--blue)}
+.timeline time{display:inline-block;font-size:13px;font-weight:700;color:var(--blue);background:var(--blue-soft);padding:2px 12px;border-radius:999px;margin-bottom:8px}
+.timeline h3{font-size:19px;color:var(--navy)}
+.timeline p{color:var(--muted);max-width:64ch;margin-top:4px}
+
+/* ===== 9. Proyek ===== */
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.proj{background:#fff;border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:var(--radius);padding:28px;transition:.2s}
+.proj:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.proj h3{font-size:21px;color:var(--navy);margin-bottom:10px}
+.proj p{color:var(--muted);margin-bottom:18px}
+.proj ul{display:flex;flex-wrap:wrap;gap:8px}
+.proj li{font-size:13px;font-weight:600;padding:4px 12px;border-radius:6px;background:var(--bg-alt);color:var(--navy);border:1px solid var(--line)}
+
+/* ===== 10. Kontak & footer ===== */
+.contact{background:linear-gradient(135deg,var(--navy),#123B73);color:#fff;text-align:center;padding:84px 0}
+.contact h2{font-size:clamp(28px,4vw,38px);font-weight:800}
+.contact p{margin-top:12px;color:#C9D6EA;font-size:18px}
+footer{background:#071A33;color:#8FA3C0;padding:24px 0;text-align:center;font-size:14px}
+
+/* ===== 11. Responsif ===== */
+@media (max-width:900px){
+  .hero-grid,.two{grid-template-columns:1fr}
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stats div:nth-child(2){border-right:0}
+  .stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media (max-width:620px){
+  .topbar nav a:not(.cta){display:none}
+  .hero{padding:56px 0 100px}
+  .grid4,.grid2{grid-template-columns:1fr}
+  .block{padding:60px 0}
+}
